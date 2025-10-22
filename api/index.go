@@ -33,8 +33,9 @@ func handler() http.HandlerFunc {
 
 	app.Get("/", func(ctx *fiber.Ctx) error {
 		return ctx.JSON(fiber.Map{
-			"uri":  ctx.Request().URI().String(),
-			"path": ctx.Path(),
+			"message": "Hello, World!",
+			"status":  "ok",
+			"code":    200,
 		})
 	})
 
